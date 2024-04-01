@@ -9,7 +9,8 @@ type EnviromentConfig = {
 }
 
 type AppConfig = {
-    PORT: string | number
+    PORT: string | number,
+    MONGO_URL: string
 }
 
 console.log(process.env)
@@ -27,12 +28,14 @@ const ENV = process.env.NODE_ENV ?? "development"
 const CONFIG : Tconfig = {
     development: {
         app: {
-            PORT: process.env.PORT || 4001
+            PORT: process.env.PORT || 4001,
+            MONGO_URL: process.env.MONGO_URL || ''
         }
     },
     production: {
         app: {
-            PORT: process.env.PORT || 8081
+            PORT: process.env.PORT || 8081,
+            MONGO_URL: process.env.MONGO_URL || ''
         }
     }
 }
