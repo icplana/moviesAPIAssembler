@@ -22,3 +22,7 @@ In branch MVCWithMongoose you find will find the connection with MongoDB by Atla
 In branch MVCWithMongoose you find will find the connection with MongoDB by Atlas using prisma
 
 In branch MVCWithMongoose you find will find the connection with sql by Neon tech using prisma
+
+
+
+To switch between branches I recommend to download the full repository (all branches) and to use the command "git checkout <branchName>"
