@@ -19,10 +19,15 @@ In branch Backend with express you find the basic configuration of the server
 
 In branch MVCWithMongoose you find will find the connection with MongoDB by Atlas using mongoose
 
-In branch MVCWithMongoose you find will find the connection with MongoDB by Atlas using prisma
+In branch MVCWithPrisma you find will find the connection with MongoDB by Atlas using prisma
 
-In branch MVCWithMongoose you find will find the connection with sql by Neon tech using prisma
+In branch prisma_with_sql you find will find the connection with sql by Neon tech using prisma
 
 
 
 To switch between branches I recommend to download the full repository (all branches) and to use the command "git checkout <branchName>"
+
+
+Its recomended to install dependencies when you switch branch.
+
+To run the server: npm run dev
