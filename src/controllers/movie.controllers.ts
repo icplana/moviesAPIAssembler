@@ -4,6 +4,7 @@ import prisma from "../db/prismaClient";
 export const createMovie = async (req: Request, res: Response) => {
 	const { name, image, genres } = req.body;
 	const userId = parseInt(req.params.userId);
+	// const userId = req.params.userId;
 
 	if (!name || !image) {
 		return res
