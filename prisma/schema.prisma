@@ -20,7 +20,6 @@ model User {
   password String   @db.VarChar(255)
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
-  movies   Movies[]
 }
 
 model Movies {
@@ -29,9 +28,7 @@ model Movies {
   image    String   @db.VarChar(255)
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
-  userId   Int
-  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  genres   MovieGenre[]
+  genre     String  @db.VarChar(255)
 }
 
 model Genre {
@@ -39,14 +36,6 @@ model Genre {
   name     String   @db.VarChar(255)
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
-  movies   MovieGenre[]
-}
 
-model MovieGenre {
-  movieId Int
-  genreId Int
-  movie   Movies @relation(fields: [movieId], references: [id])
-  genre   Genre  @relation(fields: [genreId], references: [id])
-
-  @@id([movieId, genreId])
+  
 }
